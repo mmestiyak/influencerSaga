@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --text-color-1: #272d4e;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding-left: 5%;
+  text-align: justify;
+}
