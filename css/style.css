@@ -20,6 +20,7 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   background: linear-gradient(to bottom, #e6f0ff, #f6faff);
+  overflow-x: hidden;
 }
 
 a {
@@ -27,7 +28,7 @@ a {
 }
 
 p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--text-color-2);
 }
 img {
@@ -35,16 +36,17 @@ img {
 }
 
 .container {
-  max-width: 95%;
+  max-width: 92%;
   margin: 0 auto;
-  padding-left: 5%;
 }
 
 .btn {
   padding: 0.5em 0.8em;
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #fff;
+  border: none;
+  outline: none;
 }
 .btn--radius {
   border-radius: 0.3em;
@@ -103,7 +105,7 @@ img {
 }
 
 .navbar .navbar-link {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: var(--text-color-1);
 }
@@ -118,12 +120,12 @@ img {
   min-height: 110vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 7rem;
+
   align-content: center;
 }
 .hero-title {
   font-family: 'Circular Std', sans-serif;
-  font-size: 5rem;
+  font-size: 6rem;
   line-height: 1;
   color: var(--text-color-1);
 }
@@ -133,8 +135,9 @@ img {
 .hero-subtitle {
   margin-top: 1.6em;
 }
+
 .hero-section-left .btn {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
 }
 .hero-section-left__bottom {
   margin-top: 2em;
@@ -142,7 +145,7 @@ img {
   align-items: center;
 }
 .hero-section-left__bottom a:last-child {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--text-color-3);
 }
 
@@ -151,32 +154,33 @@ img {
 }
 
 /* hero section right */
-/* .hero-section-right {
-  align-self: end;
-} */
+.hero-section-right {
+  margin-left: 6rem;
+}
 picture.shoe {
   position: relative;
 }
 picture.shoe img {
-  width: 38rem;
-  height: 26rem;
+  width: 36rem;
+  height: 36rem;
 }
 picture.shoe::before {
   content: '';
   display: block;
   background: url(../images/hero-section/1.png) no-repeat;
   position: absolute;
-  width: 30rem;
-  height: 19rem;
-  left: -7em;
-  top: -38em;
+  width: 20rem;
+  height: 15rem;
+  left: -4em;
+  top: -40em;
   background-size: cover;
+  border-radius: 1.2em;
 }
 
-picture.shoe .btn {
+picture.shoe > .btn {
   position: absolute;
   right: 3rem;
-  top: -27.5rem;
+  top: -37.5rem;
   letter-spacing: 0.3em;
   font-family: 'Circular Std', sans-serif;
 }
@@ -187,8 +191,8 @@ picture.shoe .circle-object {
   height: 7rem;
   position: absolute;
   border-radius: 50%;
-  left: -3.5em;
-  bottom: -4em;
+  left: -4.5em;
+  bottom: 1em;
 }
 
 .payment-gateways {
@@ -197,16 +201,139 @@ picture.shoe .circle-object {
   align-items: center;
   text-align: center;
   background: #fff;
-  border-radius: 3px;
-  min-height: 20rem;
-  width: 40rem;
-  padding: 1em 3em;
-  transform: translate(8rem, -3rem);
+  border-radius: 1.2em;
+  min-height: 18rem;
+  width: 32rem;
+  padding: 1.5em 2em;
+  transform: translate(10rem, -7.5rem);
 }
 .line {
   grid-column: 1 / -1;
   height: 1px;
   background: #e5efff;
+}
+
+.add-to-cart {
+  background: #fff;
+  padding: 1em 1.5em;
+  width: 70%;
+  position: absolute;
+  top: -34.9em;
+  right: -25.5em;
+  height: 36rem;
+}
+.add-to-cart__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.add-to-cart h3 {
+  text-transform: uppercase;
+  color: var(--text-color-1);
+  font-family: 'Circular Std', sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 1.5rem;
+}
+.add-to-cart h4 {
+  font-weight: 400;
+  font-family: 'Circular Std', sans-serif;
+  font-size: 2.7rem;
+  line-height: 1.3;
+  color: #222222;
+}
+.add-to-cart .dot {
+  width: 26em;
+  position: absolute;
+  top: 2em;
+  z-index: -2;
+}
+
+.add-to-cart .red-pill {
+  width: 10em;
+  height: auto;
+  position: absolute;
+  top: 14em;
+  left: 6em;
+}
+.dot-8 {
+  position: absolute;
+  width: 19em !important;
+  object-fit: contain;
+  z-index: -10;
+  left: 27em;
+  top: -54em;
+}
+.dot-2 {
+  position: absolute;
+  object-fit: contain;
+  width: 7em !important;
+  left: -7em;
+  top: -38em;
+  z-index: -3;
+}
+.variants {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1em;
+  justify-items: center;
+  margin-top: 2em;
+  align-items: center;
+}
+.variant {
+  background: #f6f6f6;
+  color: #868686;
+  padding: 1em 0.8em;
+  border-radius: 0.3em;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.price-amount {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+  position: relative;
+}
+.price-amount .price {
+  color: var(--color-purple);
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+.price-amount del {
+  text-align: right;
+  font-size: 1.7rem;
+  margin-bottom: 6em;
+  display: block;
+  color: #868686;
+}
+.price-amount .btn {
+  padding: 1em 2em;
+}
+/* featured section */
+section {
+  padding: 10rem 0;
+}
+.section-title {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 3rem;
+  justify-content: center;
+  justify-items: center;
+}
+
+.features img {
+  max-width: 100%;
+}
+.features .feature-title {
+  font-size: 2.8rem;
+  text-align: center;
 }
 
 /* cusom checkbox button */
@@ -260,4 +387,69 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+/* plus minus input */
+input,
+textarea {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+}
+
+input[type='button'] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-group {
+  font-size: 1.6rem;
+}
+
+.input-group input[type='button'] {
+  min-width: 38px;
+  width: auto;
+  transition: all 300ms ease;
+}
+.input-group input[type='number'] {
+  background-color: #eeeeee;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+  font-weight: bold;
+  height: 38px;
+  padding: 0;
+  width: 38px;
+  position: relative;
+}
+.input-group .button-minus {
+  left: 8px;
+}
+
+.input-group .quantity-field {
+  position: relative;
+  height: 38px;
+  left: 4px;
+  text-align: center;
+  width: 62px;
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 0 5px;
+  resize: vertical;
+}
+
+.button-plus {
+  left: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
 }
