@@ -7,6 +7,7 @@
 }
 :root {
   --text-color-1: #272d4e;
+  --color-purple: #7854f7;
 }
 html {
   font-size: 62.5%;
@@ -26,4 +27,50 @@ a {
   margin: 0 auto;
   padding-left: 5%;
   text-align: justify;
+}
+
+.btn {
+  padding: 0.5em 0.8em;
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #fff;
+}
+.btn--radius {
+  border-radius: 0.3em;
+}
+.btn--purple {
+  background: var(--color-purple);
+}
+
+/* navbar */
+.navbar {
+  text-transform: capitalize;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 0;
+}
+.navbar .navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar-actions {
+  justify-self: end;
+}
+.navbar-actions .btn {
+  margin-left: 1.8em;
+}
+
+.navbar .navbar-link {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-color-1);
+}
+
+.navbar .navbar-item:not(:first-of-type) {
+  padding-left: 1.8em;
 }
