@@ -7,6 +7,8 @@
 }
 :root {
   --text-color-1: #272d4e;
+  --text-color-2: #94a2b3;
+  --text-color-3: #29aaf3;
   --color-purple: #7854f7;
 }
 html {
@@ -16,10 +18,16 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
+  background: linear-gradient(to bottom, #e6f0ff, #f6faff);
 }
 
 a {
   text-decoration: none;
+}
+
+p {
+  font-size: 1.8rem;
+  color: var(--text-color-2);
 }
 
 .container {
@@ -40,6 +48,26 @@ a {
 }
 .btn--purple {
   background: var(--color-purple);
+}
+.btn--pill {
+  border-radius: 100000px;
+}
+
+/* header */
+.header {
+  position: relative;
+}
+.header::after {
+  content: '';
+  display: block;
+  background: url(../images/hero-section/v-object.png);
+  background-size: cover;
+  top: 0;
+  right: 1px;
+  width: 66rem;
+  height: 24rem;
+  position: absolute;
+  z-index: -33;
 }
 
 /* navbar */
@@ -73,4 +101,41 @@ a {
 
 .navbar .navbar-item:not(:first-of-type) {
   padding-left: 1.8em;
+}
+
+/* hero section */
+.hero-section {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 7rem;
+  align-content: center;
+}
+.hero-title {
+  font-family: 'Circular Std', sans-serif;
+  font-size: 7rem;
+  line-height: 1;
+  color: var(--text-color-1);
+}
+.hero-title span {
+  display: block;
+}
+.hero-subtitle {
+  margin-top: 1.6em;
+}
+.hero-section-left .btn {
+  font-size: 2.5rem;
+}
+.hero-section-left__bottom {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+}
+.hero-section-left__bottom a:last-child {
+  font-size: 2rem;
+  color: var(--text-color-3);
+}
+
+.hero-section-left__bottom *:not(:first-child) {
+  padding-left: 0.3em;
 }
