@@ -36,7 +36,7 @@ img {
 }
 
 .container {
-  max-width: 92%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -144,7 +144,8 @@ img {
   display: flex;
   align-items: center;
 }
-.hero-section-left__bottom a:last-child {
+.link {
+  font-weight: bold;
   font-size: 1.5rem;
   color: var(--text-color-3);
 }
@@ -216,7 +217,7 @@ picture.shoe .circle-object {
 .add-to-cart {
   background: #fff;
   padding: 1em 1.5em;
-  width: 70%;
+  width: 71%;
   position: absolute;
   top: -34.9em;
   right: -25.5em;
@@ -311,18 +312,19 @@ picture.shoe .circle-object {
   padding: 1em 2em;
 }
 /* featured section */
+
 section {
-  padding: 10rem 0;
+  padding: 4rem 0;
 }
 .section-title {
   font-size: 4rem;
   text-align: center;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 
 .features {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 3rem;
   justify-content: center;
   justify-items: center;
@@ -333,9 +335,22 @@ section {
 }
 .features .feature-title {
   font-size: 2.8rem;
-  text-align: center;
+}
+.features .feature-content {
+  padding-left: 3em;
+}
+.features p {
+  padding: 1em 0;
 }
 
+@media (max-width: 768px) {
+  html {
+    font-size: 9.4px;
+  }
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
 /* cusom checkbox button */
 .switch {
   position: relative;
@@ -452,4 +467,38 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
   -webkit-appearance: none;
+}
+@media (max-width: 892px) {
+  .hero-section-left > .hero-title {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 887px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    grid-gap: 20rem;
+  }
+  .dot,
+  .red-pill {
+    display: none;
+  }
+  .add-to-cart {
+    background: #fff;
+    padding: 1em 1.5em;
+    width: 110%;
+    position: absolute;
+    top: -34.9em;
+    right: -39.5em;
+    height: 36rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+  .container {
+    width: 98%;
+  }
 }
